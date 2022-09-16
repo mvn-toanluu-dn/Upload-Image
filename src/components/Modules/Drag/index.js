@@ -1,5 +1,5 @@
 import { useRef } from "react";
-
+import drag from "./drag.svg"
 const Drag = ({ handleChange }) => {
   const drop = useRef(null);
 
@@ -11,25 +11,25 @@ const Drag = ({ handleChange }) => {
   };
   return (
     <>
-    <div
-      className="drag-drop "
-      ref={drop}
-      onDrop={handleDrop}
-      onDragEnter={handleDragEnter}
-      onDragLeave={handleLeave}
-    >
+      <div
+        className="drag-drop "
+        ref={drop}
+        onDrop={handleDrop}
+        onDragEnter={handleDragEnter}
+        onDragLeave={handleLeave}
+      >
         <label id="label-file-upload" htmlFor="input-file-upload">
-        Drag and drop your file here
-      <input
-        type="file"
-        id="input-file-upload"
-        multiple
-        accept="image/*"
-        onChange={handleChange}
-      />
-      </label>
-      
-    </div>
+          <img src={drag} alt="" className="drag-icon" />
+          Drag and drop your file here
+          <input
+            type="file"
+            id="input-file-upload"
+            multiple
+            accept="image/*"
+            onChange={handleChange}
+          />
+        </label>
+      </div>
     </>
   );
 };

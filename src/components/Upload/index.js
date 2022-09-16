@@ -20,19 +20,12 @@ const FileUpLoad = () => {
   const handleDelete = (id) => {
     const newData = images.filter((item) => item.id !== id);
     setImages(newData);
-    // const timeId= setTimeout(()=>{
-    //     setIsToggle(!isToggle)
-    //   },500)
-  
-    //   deleteRef.current?.classList.add("opacity");
-    //   return () =>{
-    //     window.clearTimeout(timeId)
-    //   }
   };
 
   const handleDetail = (id) => {
     const imgDetail = images.find((item) => item.id === id);
     setItem(imgDetail);
+    // console.log(imgDetail);
   };
 
   return (

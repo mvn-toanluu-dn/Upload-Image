@@ -35,6 +35,7 @@ const ImageItem = ({
                   setIsToggle(!isToggle);
                 }}
               />
+              <span className="img-item-name">{image.data.name}</span>
             </a>
           </li>
         ))}
