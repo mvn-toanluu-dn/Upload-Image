@@ -35,7 +35,7 @@ const FileUpLoad = () => {
           onClick={() => setIsChange(!isChange)}
           className="btn btn-change"
         >
-          Change Layout
+          Change Layout: {!isChange ? "List Item" : "Drag & Drop"}
         </button>
       </div>
       {!isChange ? (
