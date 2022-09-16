@@ -35,10 +35,10 @@ const FileUpLoad = () => {
           onClick={() => setIsChange(!isChange)}
           className="btn btn-change"
         >
-          Change Layout: {!isChange ? "List Item" : "Drag & Drop"}
+          Change Layout: {isChange ? "List Item" : "Drag & Drop"}
         </button>
       </div>
-      {!isChange ? (
+      {isChange ? (
         <>
           <h4 className="title">Upload File</h4>
           <label htmlFor="image" className="btn btn-upload">

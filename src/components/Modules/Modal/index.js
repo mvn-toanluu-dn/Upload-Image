@@ -31,11 +31,12 @@ const Modal = ({ item, setIsToggle, isToggle }) => {
             className="close"
           />
         </div>
+        <div className="img-detail" >
         <img
-          className="img-detail"
           src={URL.createObjectURL(item?.data)}
           alt=""
         />
+        </div>
       </div>
     </div>
   );

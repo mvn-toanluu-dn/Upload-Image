@@ -20,12 +20,14 @@ const Drag = ({ handleChange }) => {
       >
         <label id="label-file-upload" htmlFor="input-file-upload">
           <img src={drag} alt="" className="drag-icon" />
-          Drag and drop your file here
+          <span className="drag-title">Drag & Drop</span>
+          <span className="drag-upload">Your files here to upload</span>
+          <span className="drag-only">Only JPEG, PNG files with max size 15mb </span>
           <input
             type="file"
             id="input-file-upload"
             multiple
-            accept="image/*"
+            accept="/*"
             onChange={handleChange}
           />
         </label>
