@@ -19,7 +19,7 @@ const Modal = ({ item, setIsToggle, isToggle }) => {
         <div className="img-content">
           <h4 className="img-name">
             {item?.data.name}
-            <span className="img-size">{item?.data.size} MB</span>
+            <span className="img-size">{item?.data.size} kB</span>
           </h4>
           <img
             
