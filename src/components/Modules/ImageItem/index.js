@@ -22,7 +22,7 @@ const ImageItem = ({
               <img
                 src={trash}
                 alt=""
-                onClick={() => handleDelete(image.id)}
+                onClick={() => handleDelete(image.id,index)}
                 className="delete-icon"
               />
               <img
@@ -37,7 +37,7 @@ const ImageItem = ({
               />
             </a>
             <h4 className="img-item-name">
-              {image.data.name.length > 30
+              {image.data.name.length > 25
                 ? image.data.name.substring(0, 10) +
                   "..." +
                   image.data.name.substring(44, image.data.length)

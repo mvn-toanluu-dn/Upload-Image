@@ -16,16 +16,23 @@ const FileUpLoad = () => {
     }
     setImages([...images]);
   };
-
-  const handleDelete = (id) => {
+  const handleDelete = (id,index) => {
     const newData = images.filter((item) => item.id !== id);
-    setImages(newData);
+    const del = document.querySelectorAll(".img-item");
+    del[index].classList.add("del");
+   const time =  setTimeout(() => {
+        del[index].classList.remove("del");
+        setImages(newData);
+    }, 500);
+    return(()=>{
+        window.clearTimeout(time)
+    })
+
   };
 
   const handleDetail = (id) => {
     const imgDetail = images.find((item) => item.id === id);
     setItem(imgDetail);
-    // console.log(imgDetail);
   };
 
   return (
@@ -55,7 +62,6 @@ const FileUpLoad = () => {
             style={{ display: "none" }}
           />
           <ImageItem
-
             images={images}
             setIsToggle={setIsToggle}
             handleDelete={handleDelete}

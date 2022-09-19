@@ -55,7 +55,7 @@ li {
   justify-content: center;
   margin-top: 40px;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 50px;
 }
 .img-list:nth-child(n) {
   animation: fadeInUp 0.75s ease-in-out;
@@ -110,7 +110,7 @@ li {
   opacity: 0;
 }
 .img-item-name {
-    font-size: 14px;
+  font-size: 14px;
 }
 .modal {
   display: none;
@@ -143,6 +143,8 @@ li {
 }
 .is-show {
   display: block;
+  animation: show 0.7s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 .img-detail {
   width: 100%;
@@ -215,10 +217,21 @@ li {
   color: #84a2d9;
   font-size: 12px;
   padding-top: 10px;
-  letter-spacing: .75px;
+  letter-spacing: 0.75px;
 }
 .opacity {
   animation: opacity 0.7s ease-out;
+}
+.del {
+  animation: opacity 0.7s ease-out;
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes fadeInUp {
   from {
@@ -236,6 +249,7 @@ li {
   }
   to {
     opacity: 0;
+    
     transition: opacity 0.7s ease-out;
   }
 }
